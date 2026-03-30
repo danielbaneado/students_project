@@ -50,7 +50,7 @@ while op!= 6:
         to_update= input("Type data to update\n >> ").capitalize()
         data_to= input(f"New {to_update.lower()}\n >> ")
         if to_update== "Age" or to_update== "ID":
-            datato= int(data_to)
+            data_to= int(data_to)
         elif to_update== "Course" or to_update== "Status":
             data_to= data_to.capitalize()
         fun.update_student(students, name_to, to_update, data_to)
