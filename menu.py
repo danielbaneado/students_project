@@ -34,8 +34,12 @@ while op!= 6:
         if not students:
             print("There's no students in system!")
             continue
-        filter_by= input("Filter student by\n >> ").capitalize()
-        data= input("Data to filter\n >> ").capitalize()
+        try:
+            filter_by= input("Filter student by\n >> ").capitalize()
+            data= input("Data to filter\n >> ").capitalize()
+        except:
+            print("An error raised, redirecting..")
+            continue
         if filter_by== "Id":
             filter_by= filter_by.upper()
         if filter_by== "Age" or filter_by== "ID":
@@ -46,9 +50,13 @@ while op!= 6:
         if not students:
             print("There's no students in system!")
             continue
-        name_to= input("Type student name\n >> ").capitalize()
-        to_update= input("Type data to update\n >> ").capitalize()
-        data_to= input(f"New {to_update.lower()}\n >> ")
+        try:
+            name_to= input("Type student name\n >> ").capitalize()
+            to_update= input("Type data to update\n >> ").capitalize()
+            data_to= input(f"New {to_update.lower()}\n >> ")
+        except:
+            print("An error raised, redirecting..")
+            continue
         if to_update== "Age" or to_update== "ID":
             data_to= int(data_to)
         elif to_update== "Course" or to_update== "Status":
